@@ -1,0 +1,96 @@
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+body{
+    background: #7a59f3;
+}
+.header{
+    height:100px;
+    display: flex;
+justify-content: center;
+align-items: center;
+background-color: #2d2929;
+opacity: .4;
+
+}
+.header h1{
+color:rgb(245, 234, 234);
+opacity:1;
+position: relative;
+text-shadow:2px 2px red;
+font-weight: bolder;
+}
+.header h1::after{
+    content: '';
+    position: absolute;
+    height: 3px;
+    width:0;
+    background-color: #fff;
+    left:0;
+    bottom: -2px;
+    transition: width .2s;
+
+}
+.header h1:hover::after{
+width: 100%;
+}
+h1:hover{
+    color:red;
+}
+.buttons{
+    height:400px;
+    width:100%;
+   display: flex;
+   justify-content: center;
+   gap: 2rem;
+   align-items: center;
+   flex-wrap: wrap;
+}
+button{
+ padding: 60px;  
+border: 4px solid rgb(44, 36, 36);
+border-radius: 10px;
+cursor: pointer;
+font-size: 40px;
+color: rgb(10, 10, 9);
+font-family: 'Times New Roman', Times, serif;
+}
+
+ .w{
+    background-image: url('./drum-kit-main/tom1.png');
+}
+.a{
+    background-image: url('./drum-kit-main/tom2.png');
+}
+.s{
+    background-image: url('./drum-kit-main/tom3.png');
+    object-fit: contain;
+}
+.d{
+    background-image: url('./drum-kit-main/tom4.png');
+    object-fit: contain;
+}
+.j{
+    background-image: url('./drum-kit-main/crash.png');
+    object-fit: contain;
+}
+.k{
+    background-image: url('./drum-kit-main/tom4.png');
+    object-fit: contain;
+}
+.l{
+    background-image: url('./drum-kit-main/snare.png');
+    object-fit: contain;
+}
+.btn{
+    transition: transform .2s;
+    background-size: cover;
+}
+.btn:hover {
+    transform: scale(1.2);
+}
+.pressed{
+    opacity: .6;
+}
